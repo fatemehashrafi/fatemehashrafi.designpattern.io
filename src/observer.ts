@@ -16,12 +16,14 @@ class Magazin implements Publication {
             console.log('you already subscribed');
         }
     }
+
     unsubscribe(user: Observer): void {
          const index =this.subscribers.indexOf(user);
          if(index >= 0){
          this.subscribers.splice(index ,1);
         }
     }   
+    
     newPublish(): void {
         console.log('new publish');
         this.subscribers.forEach(x=>{
